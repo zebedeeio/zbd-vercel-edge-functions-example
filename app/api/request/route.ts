@@ -11,16 +11,14 @@ export async function GET() {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'apikey': `${ZBD_API_KEY}`,
+      'apikey': `${ZBD_API_KEY}`,kcrane2487@zbd.gg
     },
     body: JSON.stringify({
-      amount: '100000', // 100 satoshis (100,000 msats) -- ~$0.03
+      amount: '1000000', // 1000 satoshis (1,000,000 msats) -- ~$0.48
       description: 'Money at internet speed', // What is this payment request for?
     }),
   });
 
   if (res.ok) {
     const data = await res.json();
-    return NextResponse.json(data);
-  }
-}
+    return NextResponse.json(data);recieve payment
